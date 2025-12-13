@@ -1,0 +1,1 @@
+{'name': 'Jaya', 'Science': 70, 'Math': 78, 'ICT': 87, 'Average': 78.33333333333333}

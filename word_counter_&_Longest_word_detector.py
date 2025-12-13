@@ -1,0 +1,5 @@
+text = input("Enter the sentence: ").split()
+max_text = max(text, key=len)
+print(f"You Entered {len(text)} Words")
+print(f"Longest Word is \"{max_text}\"")
+print(f"{max_text} is {len(max_text)} Characters Long")
