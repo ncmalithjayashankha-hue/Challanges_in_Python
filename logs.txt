@@ -1,0 +1,10 @@
+INFO User logged in
+ERROR Failed authentication
+WARNING Low disk space
+ERROR Timeout occurred
+INFO Session ended
+INFO User logged in
+ERROR Failed authentication
+WARNING Low disk space
+ERROR Timeout occurred
+INFO Session ended
