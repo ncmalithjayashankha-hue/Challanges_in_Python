@@ -1,4 +1,4 @@
-num_list = input("Enter the Numbers (Separated by commas): ").split(",")
+num_list = input("Enter the Numbers (Separated by commas): ").strip().split(",")
 int_num_list = list(map(int, num_list))
 state = {"Positive":0,"Negative":0,"Zero":0}
 
