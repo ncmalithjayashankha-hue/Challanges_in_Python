@@ -1,0 +1,11 @@
+{
+    "name": "Malith",
+    "age": 19,
+    "skills": [
+        "Python",
+        "Linux",
+        "File Handling",
+        "JSON"
+    ],
+    "active": true
+}

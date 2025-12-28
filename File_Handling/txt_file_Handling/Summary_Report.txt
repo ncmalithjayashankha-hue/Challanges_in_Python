@@ -1,0 +1,20 @@
+==== Multi File Analysis ====
+
+
+---- file2.txt ----
+Total Lines: 1
+Non-Empty Lines: 1
+Total Words: 8
+Total Characters: 47
+
+---- file1.txt ----
+Total Lines: 1
+Non-Empty Lines: 1
+Total Words: 9
+Total Characters: 47
+
+---- file3.txt ----
+Total Lines: 1
+Non-Empty Lines: 1
+Total Words: 12
+Total Characters: 64

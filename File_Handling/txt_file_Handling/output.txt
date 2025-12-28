@@ -1,0 +1,6 @@
+
+---- File Analysis Report ----
+Total Lines: 5
+Non-Empty Lines: 4
+Total Words: 13
+Total Characters: 79
