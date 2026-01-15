@@ -1,0 +1,5 @@
+2025-01-12 14:22:45 TCP 192.168.1.10:49833 → 185.244.25.33:4444
+2025-01-12 14:22:47 HTTP POST /gate.php HTTP/1.1
+Host: darkpanel-control[.]xyz
+User-Agent: Mozilla/5.0
+Content-Length: 128

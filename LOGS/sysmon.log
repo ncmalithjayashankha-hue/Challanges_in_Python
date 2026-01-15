@@ -1,0 +1,12 @@
+EventID: 1
+UtcTime: 2025-01-12 14:22:31.123
+ProcessGuid: {d1c3b2a1-1111-2222-3333-abcdef123456}
+ProcessId: 4321
+Image: C:\Users\User\AppData\Roaming\svchost.exe
+CommandLine: svchost.exe -silent
+CurrentDirectory: C:\Users\User\AppData\Roaming\
+User: DESKTOP-01\User
+IntegrityLevel: Medium
+Hashes: SHA256=9F4D8E3A1A6E7B9F0C1D2E3F4A5B6C7D8E9F0A1B2C3D4E5F6A7B8C9D0E
+ParentImage: C:\Windows\explorer.exe
+ParentProcessId: 2340

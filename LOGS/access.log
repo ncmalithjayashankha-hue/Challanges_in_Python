@@ -1,0 +1,2 @@
+185.244.25.33 - - [12/Jan/2025:14:25:01 +0000] "GET /uploads/shell.php?cmd=whoami HTTP/1.1" 200 34
+185.244.25.33 - - [12/Jan/2025:14:25:05 +0000] "GET /uploads/shell.php?cmd=uname -a HTTP/1.1" 200 78
