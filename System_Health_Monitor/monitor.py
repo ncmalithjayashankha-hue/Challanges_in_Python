@@ -20,6 +20,7 @@ def clear():
     os.system('clear')
 
 while True:
+    console.print("clear\n")
     clear()
     #CPU
     cpu_usage = psutil.cpu_percent(interval=0.1)
