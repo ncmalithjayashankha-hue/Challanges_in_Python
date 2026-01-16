@@ -1,0 +1,18 @@
+{
+    "master_password": "VTPHLZ9XUo5gE_CIlH6Ryb2zF3QBkJ8AfRDsH-Rp4_c=",
+    "key": "gAAAAABpai8YTEm-KKMcArRkWLsVGbgWFY80nnhXrUuFynONSerWJvVlCW3FxVtp790Cm3w6xd1iCZ-wbxNcT6jXtOq1P65Z2Nh2zNQFHaC5HfllIDuRybvBybtRKjPzo9Ae2c9isiO-",
+    "vault": {
+        "facebook": {
+            "username": "malith",
+            "password": "gAAAAABpai-VrerPm0yNa3HUI3HP6NJVdMpeSwq8EVeYvt_EEHS6EespojJN8GAe7nzSgiNpDOGM0-NN5HxtduCKBrmRQREbDA=="
+        },
+        "google": {
+            "username": "someone@gmail.com",
+            "password": "gAAAAABpajBjNWl4tAE6oa4t4Zij5oqwx3s99amYKvhmHFT14QhLG9Pyjr0_CP3OhTTwyrNKIACWDr3Grlcxqt2F_wtS_kco8Q=="
+        },
+        "github": {
+            "username": "someone@gmail.com",
+            "password": "gAAAAABpajG9gKB2A0LFF1BCpl_gGRKUHY-BUhk8HkHYByA5V-Rqn8JKZTIPBWr1Uf4aaJrDx-mJWJkUXeYwXJQB1jBVJH8PKg=="
+        }
+    }
+}
