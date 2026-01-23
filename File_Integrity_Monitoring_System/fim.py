@@ -37,13 +37,16 @@ def scan_directory(path):
             print(f"HASH: {file_hash}\n")
 
 def get_file_info(path):
-    info = os.stat(path)
+    try:
+        info = os.stat(path)
 
-    return {
-        "size": info.st_size,
-        "permission": stat.filemode(info.st_mode),
-        "modified": time.ctime(info.st_mtime),
-    }
+        return {
+            "size": info.st_size,
+            "permission": stat.filemode(info.st_mode),
+            "modified": time.ctime(info.st_mtime),
+        }
+    except (PermissionError, OSError):
+        return None
 
 def calculate_hash(file_path):
     sha256 = hashlib.sha256()
@@ -65,9 +68,12 @@ def create_baseline(path, output_file="baseline.json"):
     for root, dirs, files in os.walk(path):
         for file in files:
             full_path = os.path.join(root, file)
+            file_info = get_file_info(full_path)
+            if file_info is None:
+                continue
 
             baseline[full_path] = {
-                **get_file_info(full_path),
+                **file_info,
                 "hash": calculate_hash(full_path)
             }
 
@@ -86,9 +92,12 @@ def check_integrity(path, baseline_file="baseline.json"):
     for root, dirs, files in os.walk(path):
         for file in files:
             full_path = os.path.join(root, file)
+            file_info = get_file_info(full_path)
+            if file_info is None:
+                continue
 
             current_files[full_path] = {
-                **get_file_info(full_path),
+                **file_info,
                 "hash": calculate_hash(full_path)
             }
 
