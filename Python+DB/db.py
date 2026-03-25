@@ -1,50 +1,43 @@
 import mysql.connector
-
-conn = mysql.connector.connect(host="localhost",user="root",passwd="root",database="test_python")
+from tabulate import tabulate as t
+conn = mysql.connector.connect(host="localhost",user="root",passwd="",database="test")
 c = conn.cursor()
-print("Connected to MySQL")
 
-
-def add():
-    name=input("Please enter your name: ").strip()
-    get_dob = input("Please enter your birth date: ").strip().replace(" ","").split("/")
-    dob = f"{get_dob[0]}-{get_dob[1]}-{get_dob[2]}"
-    email = input("Please enter your email address: ").strip()
-    c.execute("insert into students (Stu_name,DOB,Email) values(%s,%s,%s)",(name,dob,email))
-    conn.commit()
-    print("Student added")
-
-def view_all():
-    c.execute("select * from students")
-    students = c.fetchall()
-    for student in students:
-        print(student)
-
-
-
-def main_menu():
+def insert_data():
+    print()
+def update_data():
+    print()
+def delete_data():
+    print()
+def show_data():
+    print()
+def select_oprt():
     while True:
-        print("==== LMS ====\n"
-              "1.Add Student\n"
-              "2.View Student Details\n"
-              "3.View All Details\n"
-              "4.Delete Student Details\n"
-              "5.Update Student Details\n"
-              "6.Exit\n")
-        option = input("Please enter your choice: ").strip()
-        if option == "1":
-            add()
-        elif option == "2":
-            pass
-        elif option == "3":
-            view_all()
-        elif option == ("6"):
-            break
+        print('''
+        Possible Operations:
+        
+        1. Insert data
+        2. Update data
+        3. Delete data
+        4. View data
+        5. Exit''')
+        c = input("Enter the Choice").lower().strip()
+        if c not in ['1','2','3','4','5']:
+            print("Invalid Choice")
+            continue
+        elif c == '1':
+            insert_data()
+        elif c == '2':
+            update_data()
+        elif c == '3':
+            delete_data()
+        elif c == '4':
+            show_data()
         else:
-            print("Invalid option")
+            print("Thank you for choosing us")
+            break
 
 
-
-
-
-main_menu()
+c.execute('select * from caption')
+print(t(c.fetchall(),headers=["ID","Name","Address","DoB","Loyalty Points"],tablefmt="fancy_grid"))
+conn.close()
