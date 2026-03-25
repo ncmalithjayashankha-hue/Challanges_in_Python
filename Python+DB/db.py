@@ -3,14 +3,31 @@ from tabulate import tabulate as t
 conn = mysql.connector.connect(host="localhost",user="root",passwd="",database="test")
 c = conn.cursor()
 
+def custom_query():
+    while True:
+        query = input("query(0 to exit) #").strip()
+        if query == "0" or query == "exit" or query == "" or query == "q":
+            break
+        else:
+            c.execute(query)
 def insert_data():
-    print()
+    c.execute('select * from caption')
+    print(t(c.fetchall(), headers=["ID", "Name", "Address", "DoB", "Loyalty Points"], tablefmt="fancy_grid"))
+    while True:
+        d = input("Do you want to Customize this Query(Y/n)").strip().lower()
+        if d == "y" or d == "":
+            custom_query()
 def update_data():
     print()
 def delete_data():
     print()
 def show_data():
-    print()
+    c.execute('select * from caption')
+    print(t(c.fetchall(), headers=["ID", "Name", "Address", "DoB", "Loyalty Points"], tablefmt="fancy_grid"))
+    while True:
+        d = input("Do you want to Customize this Query(Y/n)").strip().lower()
+        if d == "y" or d == "":
+            custom_query()
 def select_oprt():
     while True:
         print('''
@@ -40,4 +57,5 @@ def select_oprt():
 
 c.execute('select * from caption')
 print(t(c.fetchall(),headers=["ID","Name","Address","DoB","Loyalty Points"],tablefmt="fancy_grid"))
+select_oprt()
 conn.close()
