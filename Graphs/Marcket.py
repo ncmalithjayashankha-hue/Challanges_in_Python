@@ -1,10 +1,10 @@
 import matplotlib.pyplot as plt
 import math
 
-S_a = -10
+S_a = -40
 S_b = 2
-D_a = 300
-D_b = 5
+D_a = 110
+D_b = 1
 
 price = []
 quantity_of_demand = []

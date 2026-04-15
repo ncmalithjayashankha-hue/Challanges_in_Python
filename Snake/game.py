@@ -15,7 +15,7 @@ black = (0,0,0)
 
 #Snake
 snake_block = 10
-snake_speed = 10
+snake_speed = 20
 
 clock = pygame.time.Clock()
 
